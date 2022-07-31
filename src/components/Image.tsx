@@ -41,7 +41,7 @@ export const Image = ({ alt, className, isHighlighted = false, largeSrc, src, ..
   }, [isOpen]);
 
   function onClickImage(): void {
-    setIsOpen(true);
+    if (!isHighlighted) setIsOpen(true);
   }
 
   function renderModalContent() {
@@ -64,7 +64,7 @@ export const Image = ({ alt, className, isHighlighted = false, largeSrc, src, ..
     <Fragment>
       <img
         alt={alt}
-        className={`cursor-pointer ${isHighlighted ? 'border-b-aeg-red border-b-4' : ''} ${className}`}
+        className={`${isHighlighted ? 'border-b-aeg-red border-b-4' : 'cursor-pointer'} ${className}`}
         onClick={onClickImage}
         src={src}
         {...props}
