@@ -69,6 +69,7 @@ export const Image = ({ alt, className = '', isHighlighted = false, largeSrc, sr
         src={src}
         {...props}
       />
+      {/* React Portals are rendered outside the React root which greatly simplifies positioning especially for modals */}
       {portalRoot && isOpen && ReactDOM.createPortal(renderModalContent(), portalRoot)}
     </Fragment>
   );
