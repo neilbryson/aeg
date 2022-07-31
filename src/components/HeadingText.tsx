@@ -11,7 +11,7 @@ export const HeadingText = ({ className, title, children, isSubText = false }: H
     <section className={className}>
       <h1 className={`${isSubText ? 'font-medium text-sm text-aeg-red' : 'text-2xl'} mb-4`}>{title}</h1>
       {!isSubText && <div className="w-full h-[2px] bg-aeg-gray mb-4" />}
-      <p className={`${isSubText ? 'font-bold' : 'font-light'}`}>{children}</p>
+      <p className={`leading-8 ${isSubText ? 'font-bold text-white' : 'font-light'}`}>{children}</p>
     </section>
   );
 };
