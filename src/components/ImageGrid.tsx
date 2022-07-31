@@ -8,7 +8,7 @@ export type ImageGridProps = {
 
 export const ImageGrid = ({ images }: ImageGridProps) => {
   return (
-    <div className="grid grid-rows-2 grid-cols-2 gap-4 items-center">
+    <div className="grid grid-rows-2 grid-cols-2 gap-4 items-center justify-items-center">
       {images.map(([src, largeSrc], index) => {
         return <Image className={index === 0 ? `row-span-2` : ''} src={src} largeSrc={largeSrc} />;
       })}

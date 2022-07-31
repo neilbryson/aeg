@@ -56,7 +56,13 @@ export const Image = ({ alt, className, isHighlighted = false, largeSrc, src, ..
 
   return (
     <Fragment>
-      <img alt={alt} className={`cursor-pointer ${className}`} onClick={onClickImage} src={src} {...props} />
+      <img
+        alt={alt}
+        className={`cursor-pointer ${isHighlighted ? 'border-b-aeg-red border-b-4' : ''} ${className}`}
+        onClick={onClickImage}
+        src={src}
+        {...props}
+      />
       {portalRoot && isOpen && ReactDOM.createPortal(renderModalContent(), portalRoot)}
     </Fragment>
   );
