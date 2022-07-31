@@ -8,7 +8,7 @@ export type ImageProps = {
   largeSrc?: string;
 } & ImgHTMLAttributes<HTMLImageElement>;
 
-export const Image = ({ alt, isHighlighted = false, largeSrc, src, ...props }: ImageProps) => {
+export const Image = ({ alt, className, isHighlighted = false, largeSrc, src, ...props }: ImageProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const imageRef = useRef<HTMLImageElement>(null);
   const modalRef = useRef<HTMLElement>(null);
@@ -56,7 +56,7 @@ export const Image = ({ alt, isHighlighted = false, largeSrc, src, ...props }: I
 
   return (
     <Fragment>
-      <img alt={alt} className="cursor-pointer" onClick={onClickImage} src={src} {...props} />
+      <img alt={alt} className={`cursor-pointer ${className}`} onClick={onClickImage} src={src} {...props} />
       {portalRoot && isOpen && ReactDOM.createPortal(renderModalContent(), portalRoot)}
     </Fragment>
   );
