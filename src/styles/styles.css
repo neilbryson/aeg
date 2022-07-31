@@ -1,3 +1,32 @@
 @tailwind base;
+
+@layer base {
+    body {
+        min-width: 320px;
+    }
+}
+
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../assets/fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../assets/fonts/OpenSans/OpenSans-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../assets/fonts/OpenSans/OpenSans-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'OpenSans SemiCondensed';
+    src: url('../assets/fonts/OpenSans_SemiCondensed/OpenSans_SemiCondensed-Regular.ttf');
+}
