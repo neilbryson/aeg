@@ -46,10 +46,16 @@ export const Image = ({ alt, className, isHighlighted = false, largeSrc, src, ..
 
   function renderModalContent() {
     return (
-      <aside className="w-screen h-screen" ref={modalRef}>
+      <aside className="w-screen h-screen relative" ref={modalRef}>
         <div className="bg-translucent w-full h-full flex justify-center items-center">
           <img src={largeSrc ?? src} alt={alt} ref={imageRef} />
         </div>
+        <button
+          className="absolute top-0 right-0 p-4 bg-aeg-gray text-2xl hover:bg-gray-600"
+          onClick={() => setIsOpen(false)}
+        >
+          ✖
+        </button>
       </aside>
     );
   }
