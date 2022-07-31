@@ -42,6 +42,14 @@ module.exports = {
           loader: 'swc-loader',
         },
       },
+      {
+        test: /\.jpg?$/,
+        include: path.resolve(__dirname, 'src'),
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
     ],
   },
   optimization: {
