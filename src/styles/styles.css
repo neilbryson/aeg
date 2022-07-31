@@ -11,7 +11,19 @@
 
 @font-face {
     font-family: OpenSans;
+    src: url('../assets/fonts/OpenSans/OpenSans-Light.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: OpenSans;
     src: url('../assets/fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../assets/fonts/OpenSans/OpenSans-Medium.ttf');
+    font-weight: 500;
 }
 
 @font-face {
