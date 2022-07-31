@@ -10,7 +10,7 @@ export type PreviewCardProps = {
   children: ReactNode;
 } & HTMLAttributes<HTMLElement>;
 
-export const PreviewCard = ({ children, className, imgLargeSrc, imgSrc, title }: PreviewCardProps) => {
+export const PreviewCard = ({ children, className = '', imgLargeSrc, imgSrc, title }: PreviewCardProps) => {
   return (
     <section className={`w-full md:w-96 ${className}`}>
       <Image className="mb-6" src={imgSrc} largeSrc={imgLargeSrc} isHighlighted />
